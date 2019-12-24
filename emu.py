@@ -22,9 +22,7 @@ def get_digits():
 def main():
     pygame.init()
     display = pygame.display.set_mode((1130, 552))
-
     s = get_digits()
-    print(s)
 
     running = True
 
@@ -33,10 +31,8 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
-        # draw
         display.fill(Color(255, 255, 255))
 
-        # masked.blit(mask, (0, 0), None, pygame.BLEND_RGB_ADD)
         for i in range(75):
             display.blit(s[i], (0, 0))
 
